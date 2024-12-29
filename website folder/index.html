@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('servoces')">Services</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+   </header>
+
+   <section id="home" class="active">
+    <h1>Welcome</h1>
+   </section>
+
+   <section id="about">
+    <h1>About</h1>
+   </section>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis</p>
+
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiisLorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+   <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates impedit, ea dolor, atque commodi quaerat quo laborum eaque porro omnis minus, quisquam deleniti. Porro distinctio natus quibusdam placeat blanditiis
+   </p>
+
+    <footer>
+        <p>&copy; 2024 MathMarvel Company</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="color: rgb(207, 101, 119);"></i></a>
+            <a href="https://snapchat.com" target="_blank"><i class="fab fa-snapchat" style="color: yellow;"></i></a>
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp" style="color:rgb(55, 190, 55)"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        
+        function showSection(sectionId){
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section =>{
+                section.classList.remove('active');
+            });
+        
+            const activeSection =document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        
+            const navLinks= document.querySelectorAll('nav-links li a');
+            navLinks.forEach(link =>{
+                link.classList.remove('active-nav');
+            });
+        
+            const activeLink =document.querySelectorAll('a[href="#${sectionId}"]');
+        
+            activeLink.classList.add('active-nav');
+        }
+        
+        document.addEventListener("DOMContentLoaded", ()=> {
+            showSection('home');
+        });
+
+    </script>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
